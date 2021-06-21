@@ -8,4 +8,9 @@ app.get("/products", (request, response) => {
 
 });
 
+
+app.post("/products", (request, response) => {
+    return response.send("oi post");
+});
+
 app.listen(3000, () => {console.log("Server Running...")})
