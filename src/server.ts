@@ -1,16 +1,9 @@
 import express from 'express';
+import "./database";
+import { router } from './routes'
 
 const app = express();
-
-app.get("/products", (request, response) => {
-
-    return response.send("oi bb");
-
-});
-
-
-app.post("/products", (request, response) => {
-    return response.send("oi post");
-});
+app.use(express.json());
+app.use(router);
 
 app.listen(3000, () => {console.log("Server Running...")})
